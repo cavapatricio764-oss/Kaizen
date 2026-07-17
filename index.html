@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAIZEN | Consultoría Empresarial</title>
+<meta name="description" content="Consultoría Empresarial para organizaciones que buscan crecer con información clara, decisiones oportunas y acompañamiento permanente.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ ICON SPRITE ============ -->
+<svg style="display:none">
+  <symbol id="i-users" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M17 21v-2a4 4 0 0 0-4-4H7a4 4 0 0 0-4 4v2"/><circle cx="10" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="M9 12l2 2 4-4"/></symbol>
+  <symbol id="i-trend" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M23 6l-9.5 9.5-5-5L1 18"/><path d="M17 6h6v6"/></symbol>
+  <symbol id="i-file" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h1"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-lock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+  <symbol id="i-heart" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8l1 1L12 21l7.8-7.6 1-1a5.5 5.5 0 0 0 0-7.8Z"/></symbol>
+  <symbol id="i-award" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.5 7 22l5-3 5 3-1.2-8.5"/></symbol>
+  <symbol id="i-handshake" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 12 8 9l-5 4v2l3 3 3-2"/><path d="M13 12l3-3 5 4v2l-3 3-3-2"/><path d="M8 13l2.5 2.5a1.7 1.7 0 0 0 2.4 0l.1-.1a1.7 1.7 0 0 0 0-2.4L11 11"/></symbol>
+  <symbol id="i-building" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="2" width="16" height="20" rx="1"/><path d="M9 22v-4h6v4M9 6h1M9 10h1M9 14h1M14 6h1M14 10h1M14 14h1"/></symbol>
+  <symbol id="i-calc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 6h8M8 11h1M12 11h1M16 11h1M8 15h1M12 15h1M16 15h1M8 19h1M12 19h1M16 19h1"/></symbol>
+  <symbol id="i-percent" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M19 5 5 19"/><circle cx="6.5" cy="6.5" r="2.5"/><circle cx="17.5" cy="17.5" r="2.5"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M2 13h20"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-calendar" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .3 2 .6 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.9.5 2.9.6a2 2 0 0 1 1.7 2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 10 6 10-6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 10c0 6-9 12-9 12s-9-6-9-12a9 9 0 1 1 18 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-linkedin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/><path d="M10 9v12M10 13a4 4 0 0 1 8 0v8"/></symbol>
+  <symbol id="i-insta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-send" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="m22 2-11 11M22 2l-7 20-4-9-9-4 20-7Z"/></symbol>
+  <symbol id="i-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></symbol>
+</svg>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <div class="container header-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark"><svg viewBox="0 0 40 40" width="34" height="34"><circle cx="20" cy="20" r="19" fill="#0f1522" stroke="#c8202f" stroke-width="1.5"/><path d="M12 26 17 19 21 23 28 12" stroke="#c8202f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 12h4v4" stroke="#c8202f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="logo-text">
+        <strong>KAIZEN</strong>
+        <em>Consultoría Empresarial</em>
+      </span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#top" class="active">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#informes">Informes</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <a href="#contacto" class="btn btn-primary btn-sm header-cta">Agenda una reunión</a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow reveal">Consultoría empresarial</p>
+      <h1 class="hero-title" id="hero-title" aria-label="Comprendemos empresas. Acompañamos decisiones."></h1>
+      <p class="hero-desc reveal" style="--d:.5s">Consultoría empresarial para organizaciones que buscan crecer con información clara, decisiones oportunas y acompañamiento permanente.</p>
+      <div class="hero-actions reveal" style="--d:.65s">
+        <a href="#contacto" class="btn btn-primary">Agenda una reunión</a>
+        <a href="#servicios" class="btn btn-outline">Conoce nuestros servicios <svg width="16" height="16"><use href="#i-chevron"/></svg></a>
+      </div>
+    </div>
+    <div class="hero-media fade-in">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1400&auto=format&fit=crop" alt="Equipo Kaizen presentando resultados financieros en sala de reuniones">
+    </div>
+  </div>
+
+  <div class="feature-strip">
+    <div class="container feature-grid">
+      <div class="feature zoom-in">
+        <svg width="30" height="30"><use href="#i-users"/></svg>
+        <h3>Cercanía</h3>
+        <p>Nos involucramos en cada empresa como parte de su equipo.</p>
+      </div>
+      <div class="feature zoom-in" style="--d:.05s">
+        <svg width="30" height="30"><use href="#i-shield"/></svg>
+        <h3>Confianza</h3>
+        <p>Más de 20 años acompañando empresas chilenas en sus decisiones.</p>
+      </div>
+      <div class="feature zoom-in" style="--d:.1s">
+        <svg width="30" height="30"><use href="#i-trend"/></svg>
+        <h3>Estrategia</h3>
+        <p>No esperamos que aparezcan los problemas. Los anticipamos.</p>
+      </div>
+      <div class="feature zoom-in" style="--d:.15s">
+        <svg width="30" height="30"><use href="#i-file"/></svg>
+        <h3>Información</h3>
+        <p>Transformamos datos complejos en decisiones simples.</p>
+      </div>
+      <div class="feature zoom-in" style="--d:.2s">
+        <svg width="30" height="30"><use href="#i-clock"/></svg>
+        <h3>Acompañamiento</h3>
+        <p>Estamos presentes en cada etapa del crecimiento de nuestros clientes.</p>
+      </div>
+      <div class="feature zoom-in" style="--d:.25s">
+        <svg width="30" height="30"><use href="#i-lock"/></svg>
+        <h3>Compromiso</h3>
+        <p>Comprometidos con el crecimiento sostenible de nuestros clientes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INFO PARA DECIDIR ============ -->
+<section class="decide">
+  <img class="decide-bg" src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop" alt="Fachada de edificio corporativo">
+  <div class="decide-overlay"></div>
+  <div class="container decide-grid">
+    <div class="decide-copy">
+      <p class="eyebrow reveal">Información para decidir</p>
+      <h2 class="reveal" style="--d:.1s">Una empresa necesita más que estados financieros.</h2>
+      <p class="reveal" style="--d:.2s">Necesita entender qué está ocurriendo, por qué está ocurriendo, qué riesgos existen, qué oportunidades aparecen y cuáles son las próximas decisiones. Ese es nuestro trabajo.</p>
+      <ul class="check-list reveal" style="--d:.3s">
+        <li><svg width="18" height="18"><use href="#i-check"/></svg>Información clara y oportuna</li>
+        <li><svg width="18" height="18"><use href="#i-check"/></svg>Análisis profundo y práctico</li>
+        <li><svg width="18" height="18"><use href="#i-check"/></svg>Reportes ejecutivos</li>
+        <li><svg width="18" height="18"><use href="#i-check"/></svg>Visión estratégica</li>
+        <li><svg width="18" height="18"><use href="#i-check"/></svg>Acompañamiento permanente</li>
+      </ul>
+    </div>
+    <div class="decide-card reveal" style="--d:.2s">
+      <div class="decide-icon zoom-in"><svg width="26" height="26"><use href="#i-calendar"/></svg></div>
+      <h3>¿Conversemos?</h3>
+      <p>Cada empresa enfrenta desafíos distintos. Por eso, antes de hablar de servicios, queremos comprender tu negocio.</p>
+      <a href="#contacto" class="btn btn-primary">Agenda una reunión</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOSOTROS ============ -->
+<section class="section" id="nosotros">
+  <div class="container">
+    <p class="section-num reveal">02 — Nosotros</p>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <h2>Quiénes somos</h2>
+        <p>Somos un equipo de profesionales con más de 20 años de experiencia acompañando a empresas de distintos rubros en su crecimiento y consolidación.</p>
+        <p>Nuestro propósito es transformar información compleja en decisiones simples, contribuyendo al desarrollo sostenible de nuestros clientes.</p>
+
+        <h3 class="values-title">Nuestros valores</h3>
+        <div class="values-grid">
+          <div class="value zoom-in">
+            <svg width="26" height="26"><use href="#i-heart"/></svg>
+            <span>Integridad</span>
+            <p>Actuamos con ética y transparencia.</p>
+          </div>
+          <div class="value zoom-in" style="--d:.05s">
+            <svg width="26" height="26"><use href="#i-award"/></svg>
+            <span>Excelencia</span>
+            <p>Buscamos la mejor calidad en todo lo que hacemos.</p>
+          </div>
+          <div class="value zoom-in" style="--d:.1s">
+            <svg width="26" height="26"><use href="#i-handshake"/></svg>
+            <span>Compromiso</span>
+            <p>Nos involucramos con cada cliente.</p>
+          </div>
+          <div class="value zoom-in" style="--d:.15s">
+            <svg width="26" height="26"><use href="#i-building"/></svg>
+            <span>Cercanía</span>
+            <p>Construimos relaciones de largo plazo.</p>
+          </div>
+        </div>
+      </div>
+      <div class="about-media fade-in">
+        <img src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?q=80&w=1200&auto=format&fit=crop" alt="Oficina corporativa de Kaizen">
+      </div>
+    </div>
+
+    <div class="stats-bar">
+      <div class="stat zoom-in"><strong>+20</strong><span>Años de experiencia</span></div>
+      <div class="stat zoom-in" style="--d:.05s"><strong>+100</strong><span>Empresas asesoradas</span></div>
+      <div class="stat zoom-in" style="--d:.1s"><strong>+500</strong><span>Informes realizados</span></div>
+      <div class="stat zoom-in" style="--d:.15s"><strong>100%</strong><span>Comprometidos</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICIOS ============ -->
+<section class="section section-alt" id="servicios">
+  <div class="container">
+    <p class="section-num reveal">03 — Servicios</p>
+    <div class="section-head reveal">
+      <h2>Nuestros servicios</h2>
+      <p>Soluciones integrales y personalizadas para apoyar la gestión y el crecimiento de tu empresa.</p>
+    </div>
+
+    <div class="services-grid">
+      <article class="service-card zoom-in">
+        <div class="service-icon"><svg width="26" height="26"><use href="#i-calc"/></svg></div>
+        <h3>Contabilidad estratégica</h3>
+        <p>Registramos, analizamos e interpretamos la información financiera para apoyar la toma de decisiones.</p>
+        <a href="#contacto" class="link-arrow">Ver más <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="service-card zoom-in" style="--d:.05s">
+        <div class="service-icon"><svg width="26" height="26"><use href="#i-percent"/></svg></div>
+        <h3>Tributación</h3>
+        <p>Planificación tributaria, cumplimiento normativo, procesos de renta y asesoría permanente.</p>
+        <a href="#contacto" class="link-arrow">Ver más <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="service-card zoom-in" style="--d:.1s">
+        <div class="service-icon"><svg width="26" height="26"><use href="#i-briefcase"/></svg></div>
+        <h3>Gestión laboral</h3>
+        <p>Contratos, remuneraciones, finiquitos, auditorías laborales y asesoría permanente.</p>
+        <a href="#contacto" class="link-arrow">Ver más <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+      </article>
+      <article class="service-card zoom-in" style="--d:.15s">
+        <div class="service-icon"><svg width="26" height="26"><use href="#i-search"/></svg></div>
+        <h3>Consultoría empresarial</h3>
+        <p>Informes ejecutivos, control de gestión, valuaciones, due diligence y diagnósticos empresariales.</p>
+        <a href="#contacto" class="link-arrow">Ver más <svg width="14" height="14"><use href="#i-arrow"/></svg></a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ INFORMES ============ -->
+<section class="section" id="informes">
+  <div class="container informes-grid">
+    <div class="informes-copy reveal">
+      <p class="section-num">04 — Informes</p>
+      <h2>Informes que generan valor</h2>
+      <p>Entregamos informes claros, ejecutivos y personalizados que ayudan a comprender la realidad de tu empresa y proyectar mejores decisiones.</p>
+      <ul class="check-list">
+        <li><svg width="18" height="18"><use href="#i-check"/></svg>Informes ejecutivos</li>
+        <li><svg width="18" height="18"><use href="#i-check"/></svg>Informes financieros</li>
+        <li><svg width="18" height="18"><use href="#i-check"/></svg>Informes tributarios</li>
+        <li><svg width="18" height="18"><use href="#i-check"/></svg>Informes laborales</li>
+        <li><svg width="18" height="18"><use href="#i-check"/></svg>Valorizaciones y due diligence</li>
+      </ul>
+      <a href="#contacto" class="btn btn-primary">Ver ejemplos de informes</a>
+    </div>
+    <div class="informes-media fade-in">
+      <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1000&auto=format&fit=crop" alt="Informe ejecutivo impreso">
+    </div>
+  </div>
+</section>
+
+<!-- ============ RECURSOS ============ -->
+<section class="section section-alt" id="recursos">
+  <div class="container">
+    <p class="section-num reveal">05 — Recursos</p>
+    <div class="section-head reveal">
+      <h2>Recursos para tu empresa</h2>
+      <p>Información, herramientas y contenidos prácticos para apoyar la gestión y el crecimiento de tu negocio.</p>
+    </div>
+
+    <div class="resources-grid">
+      <article class="resource-card zoom-in">
+        <div class="resource-media"><img src="https://images.unsplash.com/photo-1554224154-26032ffc0d07?q=80&w=800&auto=format&fit=crop" alt="Artículos de negocio"></div>
+        <h3>Artículos</h3>
+        <p>Contenido actualizado sobre temas contables, tributarios y laborales.</p>
+      </article>
+      <article class="resource-card zoom-in" style="--d:.05s">
+        <div class="resource-media"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=800&auto=format&fit=crop" alt="Equipo revisando guías de gestión"></div>
+        <h3>Guías y recursos</h3>
+        <p>Herramientas prácticas para mejorar la gestión de tu empresa.</p>
+      </article>
+      <article class="resource-card zoom-in" style="--d:.1s">
+        <div class="resource-media"><img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?q=80&w=800&auto=format&fit=crop" alt="Edificio corporativo, normativa vigente"></div>
+        <h3>Normativa</h3>
+        <p>Resumen de cambios normativos relevantes y su impacto.</p>
+      </article>
+    </div>
+    <a href="#recursos" class="btn btn-primary">Ver todos los recursos</a>
+  </div>
+</section>
+
+<!-- ============ CONTACTO ============ -->
+<section class="section contact" id="contacto">
+  <div class="container contact-grid">
+    <div class="contact-info reveal">
+      <h2>Hablemos de tu empresa</h2>
+      <p>Cuéntanos tus desafíos y conversemos sobre cómo podemos acompañarte.</p>
+      <ul class="contact-list">
+        <li><svg width="18" height="18"><use href="#i-phone"/></svg>+56 9 2039 8960</li>
+        <li><svg width="18" height="18"><use href="#i-mail"/></svg>ncelis@grupokaizen.cl</li>
+        <li><svg width="18" height="18"><use href="#i-pin"/></svg>Rancagua, Chile</li>
+      </ul>
+      <div class="social-row">
+        <a href="#" aria-label="LinkedIn"><svg width="18" height="18"><use href="#i-linkedin"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="18" height="18"><use href="#i-insta"/></svg></a>
+        <a href="#" aria-label="Correo"><svg width="18" height="18"><use href="#i-mail"/></svg></a>
+      </div>
+    </div>
+
+    <form class="contact-form reveal" style="--d:.15s" id="contact-form">
+      <div class="form-row">
+        <div class="field"><label for="nombre">Nombre</label><input id="nombre" name="nombre" type="text" required></div>
+        <div class="field"><label for="empresa">Empresa</label><input id="empresa" name="empresa" type="text"></div>
+      </div>
+      <div class="form-row">
+        <div class="field"><label for="correo">Correo electrónico</label><input id="correo" name="correo" type="email" required></div>
+        <div class="field"><label for="telefono">Teléfono</label><input id="telefono" name="telefono" type="tel"></div>
+      </div>
+      <div class="field">
+        <label for="mensaje">¿En qué podemos ayudarte?</label>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+      </div>
+      <button type="submit" class="btn btn-primary">Enviar mensaje <svg width="16" height="16"><use href="#i-send"/></svg></button>
+      <p class="form-note" id="form-note" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#top" class="logo">
+        <span class="logo-mark"><svg viewBox="0 0 40 40" width="34" height="34"><circle cx="20" cy="20" r="19" fill="#0f1522" stroke="#c8202f" stroke-width="1.5"/><path d="M12 26 17 19 21 23 28 12" stroke="#c8202f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/><path d="M24 12h4v4" stroke="#c8202f" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="logo-text"><strong>KAIZEN</strong><em>Consultoría Empresarial</em></span>
+      </a>
+      <p>Comprendemos empresas.<br>Acompañamos decisiones.</p>
+      <div class="social-row">
+        <a href="#" aria-label="LinkedIn"><svg width="16" height="16"><use href="#i-linkedin"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg width="16" height="16"><use href="#i-insta"/></svg></a>
+        <a href="#" aria-label="Correo"><svg width="16" height="16"><use href="#i-mail"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Navegación</h4>
+      <a href="#top">Inicio</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#servicios">Servicios</a>
+      <a href="#informes">Informes</a>
+      <a href="#recursos">Recursos</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Servicios</h4>
+      <a href="#servicios">Contabilidad estratégica</a>
+      <a href="#servicios">Tributación</a>
+      <a href="#servicios">Gestión laboral</a>
+      <a href="#servicios">Consultoría empresarial</a>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contacto</h4>
+      <a href="tel:+56920398960">+56 9 2039 8960</a>
+      <a href="mailto:ncelis@grupokaizen.cl">ncelis@grupokaizen.cl</a>
+      <span>Rancagua, Chile</span>
+    </div>
+
+    <div class="footer-col footer-news">
+      <h4>Suscríbete a nuestro boletín</h4>
+      <p>Recibe información y contenidos útiles para tu empresa.</p>
+      <form class="news-form" id="news-form">
+        <input type="email" placeholder="Tu correo electrónico" required aria-label="Correo electrónico">
+        <button type="submit" aria-label="Suscribirse"><svg width="16" height="16"><use href="#i-send"/></svg></button>
+      </form>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <span>© 2024 KAIZEN Consultoría Empresarial. Todos los derechos reservados.</span>
+    <span>www.grupokaizen.cl</span>
+  </div>
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
