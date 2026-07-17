@@ -50,11 +50,67 @@ document.addEventListener('DOMContentLoaded', () => {
           io.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+      // threshold is a % of the root (viewport), not of each block — so tall
+      // stacked sections on mobile still trigger as soon as they scroll into view,
+      // instead of waiting for a fixed pixel margin that barely matters on small screens.
+    }, { threshold: 0.05, rootMargin: '0px 0px -10% 0px' });
 
     animated.forEach(el => io.observe(el));
+
+    // Safety net: if an element is already on-screen at load (e.g. the hero on a
+    // short mobile viewport) but for any reason never fires, reveal it after 2.5s.
+    setTimeout(() => {
+      animated.forEach(el => el.classList.add('in-view'));
+    }, 2500);
   } else {
     animated.forEach(el => el.classList.add('in-view'));
+  }
+
+  /* ---------- Stats counter (0 → target) ---------- */
+  const counters = document.querySelectorAll('.counter');
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (counters.length && prefersReducedMotion){
+    counters.forEach(el => {
+      el.textContent = `${el.dataset.prefix || ''}${el.dataset.target}${el.dataset.suffix || ''}`;
+    });
+  } else if (counters.length){
+    const animateCounter = (el) => {
+      const target = parseInt(el.dataset.target, 10) || 0;
+      const prefix = el.dataset.prefix || '';
+      const suffix = el.dataset.suffix || '';
+      const duration = 1400; // ms
+      const start = performance.now();
+
+      function tick(now){
+        const progress = Math.min((now - start) / duration, 1);
+        // ease-out for a natural deceleration near the target
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const value = Math.round(eased * target);
+        el.textContent = `${prefix}${value}${suffix}`;
+        if (progress < 1){
+          requestAnimationFrame(tick);
+        } else {
+          el.textContent = `${prefix}${target}${suffix}`;
+        }
+      }
+      requestAnimationFrame(tick);
+    };
+
+    if ('IntersectionObserver' in window){
+      const counterIo = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting){
+            animateCounter(entry.target);
+            counterIo.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.3, rootMargin: '0px 0px -10% 0px' });
+      counters.forEach(el => counterIo.observe(el));
+    } else {
+      counters.forEach(el => {
+        el.textContent = `${el.dataset.prefix || ''}${el.dataset.target}${el.dataset.suffix || ''}`;
+      });
+    }
   }
 
   /* ---------- Mobile nav toggle ---------- */
