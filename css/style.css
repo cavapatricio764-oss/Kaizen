@@ -5,8 +5,8 @@
 :root{
   --navy: #0b141f;
   --navy-2: #131a2b;
-  --gold: #a59e86;
-  --gold-dark: #87816d;
+  --gold: #a69458;
+  --gold-dark: #8a7a48;
   --ink-strong: #242930;
   --cream: #f5f6f8;
   --white: #ffffff;
@@ -93,7 +93,7 @@ button, input, textarea{ font-family: inherit; }
   padding: 14px 28px;
 }
 .logo{ display:flex; align-items:center; margin-right: auto; }
-.logo-img{ height: 38px; width: auto; display:block; }
+.logo-img{ height: 49px; width: auto; display:block; }
 
 .main-nav{ display:flex; align-items:center; gap: 30px; }
 .main-nav a{
@@ -156,8 +156,8 @@ button, input, textarea{ font-family: inherit; }
 
 /* ---------- Decide (dark CTA band) ---------- */
 .decide{ position: relative; background: var(--navy); color:#fff; overflow:hidden; }
-.decide-bg{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.28; }
-.decide-overlay{ position:absolute; inset:0; background: linear-gradient(100deg, rgba(13,19,32,.98) 30%, rgba(13,19,32,.75) 100%); }
+.decide-bg{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:.4; }
+.decide-overlay{ position:absolute; inset:0; background: linear-gradient(100deg, rgba(13,19,32,.72) 30%, rgba(13,19,32,.55) 100%); }
 .decide-grid{
   position:relative; display:grid; grid-template-columns: 1.4fr 1fr; gap: 60px; align-items:center;
   padding: 88px 28px;
@@ -295,6 +295,8 @@ button, input, textarea{ font-family: inherit; }
 .news-form button:hover{ background: var(--gold-dark); }
 
 .footer-bottom{ display:flex; justify-content:space-between; padding: 22px 28px; font-size: 12.5px; color: rgba(255,255,255,.4); }
+.footer-bottom a{ color: inherit; transition: color .2s; }
+.footer-bottom a:hover{ color: var(--gold); }
 
 /* ==========================================================================
    Animations
