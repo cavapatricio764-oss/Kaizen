@@ -21,10 +21,10 @@ document.addEventListener('DOMContentLoaded', () => {
       if (i < full.length){
         const char = full[i];
         const textNode = document.createTextNode(char);
-        // highlight the final period in the brand red
+        // highlight the final period in the brand gold
         if (i === full.length - 1 && char === '.'){
           const span = document.createElement('span');
-          span.style.color = 'var(--red)';
+          span.style.color = 'var(--gold)';
           span.textContent = char;
           titleEl.insertBefore(span, cursor);
         } else {
