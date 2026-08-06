@@ -101,7 +101,7 @@ button, input, textarea{ font-family: inherit; }
   padding: 14px 28px;
 }
 .logo{ display:flex; align-items:center; margin-right: auto; }
-.logo-img{ height: 49px; width: auto; display:block; }
+.logo-img{ height: 58px; width: auto; display:block; }
 
 .main-nav{ display:flex; align-items:center; gap: 30px; }
 .main-nav a{
@@ -264,7 +264,7 @@ button, input, textarea{ font-family: inherit; }
 
 .stats-bar{
   margin-top: 64px; background: var(--navy); border-radius: var(--radius);
-  display:grid; grid-template-columns: repeat(4,1fr);
+  display:grid; grid-template-columns: repeat(2,1fr);
   overflow:hidden;
 }
 .stat{ text-align:center; padding: 34px 12px; border-left: 1px solid rgba(255,255,255,.08); }
