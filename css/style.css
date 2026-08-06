@@ -101,7 +101,7 @@ button, input, textarea{ font-family: inherit; }
   padding: 14px 28px;
 }
 .logo{ display:flex; align-items:center; margin-right: auto; }
-.logo-img{ height: 58px; width: auto; display:block; }
+.logo-img{ height: 42px; width: auto; display:block; }
 
 .main-nav{ display:flex; align-items:center; gap: 30px; }
 .main-nav a{
