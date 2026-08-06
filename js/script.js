@@ -21,15 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (i < full.length){
         const char = full[i];
         const textNode = document.createTextNode(char);
-        // highlight the final period in the client's accent red
-        if (i === full.length - 1 && char === '.'){
-          const span = document.createElement('span');
-          span.style.color = 'var(--accent-red)';
-          span.textContent = char;
-          titleEl.insertBefore(span, cursor);
-        } else {
-          titleEl.insertBefore(textNode, cursor);
-        }
+        titleEl.insertBefore(textNode, cursor);
         i++;
         setTimeout(typeNext, speed);
       } else {
